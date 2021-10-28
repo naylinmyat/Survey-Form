@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey-Form</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title">Application For Permission To Play "PUBG" With Me</h1>
+            <p id="description">(Player Unknown's Battlegrounds)</p>
+        </header>
+
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" id="name" class="form-control" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" id="email" class="form-control" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label id="number-label" for="number">ID :</label>
+                <input type="number" id="number" class="form-control" min="10000000000" max="99999999999" name="number" placeholder="Enter your ID" required>
+            </div>
+
+            <div class="form-group">
+            <p>Which is your playing role?</p>
+                <select name="role" id="dropdown" class="form-control" required>
+                    <option disabled selected value>Select your role</option>
+                    <option value="leader">Leader</option>
+                    <option value="support-and-damage">Support and Damage</option>
+                    <option value="long-range">Long Range</option>
+                    <option value="rusher">Rusher</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>What is your gender?</p>
+                <label>
+                    <input name="gender" value="men" type="radio" class="input-radio" checked/>Men</label>
+                
+                <label>
+                    <input name="gender" value="women" type="radio" class="input-radio" />Women</label>
+            </div>
+            
+            <div class="form-group">
+                <p>What kind of device are you playing on?</p>
+                <select name="playing-device" id="dropdown" class="form-control" required>
+                    <option disabled selected value>Select a device</option>
+                    <option value="mobile">Mobile</option>
+                    <option value="tablet">Tablet</option>
+                    <option value="pc-emulator">PC-Emulator</option>
+                </select>
+            </div>
+        
+            <div class="form-group">
+                <p>Which map do you prefer?<span class="clue">(Check all that apply)</span></p>
+                <label><input name="prefer" value="erangel" type="checkbox" class="input-checkbox"/>Erangel</label>
+                <label><input name="prefer" value="miramar" type="checkbox" class="input-checkbox"/>Miramar</label>
+                <label><input name="prefer" value="sanhok" type="checkbox" class="input-checkbox"/>Sanhok</label>
+                <label><input name="prefer" value="vikendi" type="checkbox" class="input-checkbox"/>Vikendi</label>
+                <label><input name="prefer" value="livik" type="checkbox" class="input-checkbox"/>Livik</label>
+                <label><input name="prefer" value="karakin" type="checkbox" class="input-checkbox"/>Karakin</label>
+            </div>
+
+            <div class="form-group">
+                <p>Any comments or suggestions?</p>
+                <textarea name="comment" id="comments" class="input-textarea" placeholder="Enter your comment here..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <button id="submit" class="submit-button" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
